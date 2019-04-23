@@ -26,10 +26,13 @@ namespace ConsoleApp3
 		{
 				Console.WriteLine("Digite o valor a ser aplicado (R$):\n ");
 				decimal.TryParse(Console.ReadLine(), out valor_aplicado);
+				Console.WriteLine();
 				Console.WriteLine("Digite o rendimento mensal desejado, modalidade Poupança (%):\n ");
 				decimal.TryParse(Console.ReadLine(), out rendimento);
 				Console.WriteLine("Digite a quantidade de meses que o dinheiro ficará aplicado:\n ");
+				Console.WriteLine();
 				int.TryParse(Console.ReadLine(), out quant_meses);
+				Console.WriteLine();
 				Console.WriteLine("Digite o redimento (%) desejado para renda fixa:\n ");
 				decimal.TryParse(Console.ReadLine(), out renda_fixa);
 			
