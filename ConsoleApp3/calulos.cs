@@ -36,7 +36,7 @@ namespace ConsoleApp3
 					impostorenda = totalrenda_fixa- totalrenda_fixa * 1 / 100;
 				}
 			
-			//return (totalfinal);
+			
 		}
 	}
 }

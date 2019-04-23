@@ -18,10 +18,12 @@ namespace ConsoleApp3
 			int quant_meses=0;
 			Boolean i = false;	
 						
-			calulos calculo = new calulos();
-		while (i == false)
+			calulos calculo = new calulos();//Instanciando a classe que possui o método 
+											//que calcula os rendimentos e imposto de renda
+
+			while (i == false)//Repete a solicitação dos dados para calculo de rendimento caso 
+							  //sejam digitados valores inválidos como 0 e valores negativos
 		{
-						
 				Console.WriteLine("Digite o valor a ser aplicado (R$):\n ");
 				decimal.TryParse(Console.ReadLine(), out valor_aplicado);
 				Console.WriteLine("Digite o rendimento mensal desejado, modalidade Poupança (%):\n ");
@@ -30,11 +32,11 @@ namespace ConsoleApp3
 				int.TryParse(Console.ReadLine(), out quant_meses);
 				Console.WriteLine("Digite o redimento (%) desejado para renda fixa:\n ");
 				decimal.TryParse(Console.ReadLine(), out renda_fixa);
-
+			
 				if (valor_aplicado > 0 && rendimento>0 && renda_fixa>0 && quant_meses>0)
 				{
 
-				calculo.calcula(quant_meses, valor_aplicado, rendimento, renda_fixa);
+				calculo.calcula(quant_meses, valor_aplicado, rendimento, renda_fixa);// chama o método que calcula o rendimento
 
 				Console.WriteLine(valor_aplicado + " Reais aplicado na Poupança a um rendimento mensal de " + rendimento + "%, durante "
 			+ quant_meses + " meses, rende um total de " + calculo.total_investimento + " Reais \n");
