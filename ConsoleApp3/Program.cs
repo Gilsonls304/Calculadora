@@ -38,28 +38,29 @@ namespace ConsoleApp3
 
 				calculo.calcula(quant_meses, valor_aplicado, rendimento, renda_fixa);// chama o método que calcula o rendimento
 
-				Console.WriteLine(valor_aplicado + " Reais aplicado na Poupança a um rendimento mensal de " + rendimento + "%, durante "
-			+ quant_meses + " meses, rende um total de " + calculo.total_investimento + " Reais \n");
+				Console.WriteLine("{0} Reais aplicado na Poupança a um rendimento mensal de {1}%, durante " +
+					"{2} meses, rende um total de {3} Reais\n", valor_aplicado, rendimento, quant_meses, calculo.total_investimento);
+
 				if (quant_meses <= 12)
 				{
-					Console.WriteLine(valor_aplicado + " Reais aplicado a uma renda fixa com investimento de " + renda_fixa + "%, durante "
-					+ quant_meses + " meses, imposto de renda de 25%, rende um total de " + calculo.impostorenda + " Reais \n");
+					Console.WriteLine(" {0} Reais aplicado a uma renda fixa com investimento de {1} %, durante " +
+					"{2} meses, imposto de renda de 25%, rende um total de {3} Reais \n",valor_aplicado, renda_fixa, quant_meses, calculo.impostorenda);
 				}
 				else if (quant_meses > 12 && quant_meses < 25)
 				{
-					Console.WriteLine(valor_aplicado + " Reais aplicado a uma renda fixa com investimento de " + renda_fixa + "%, durante "
-					+ quant_meses + " meses, imposto de renda de 15%, rende um total de " + calculo.impostorenda + " Reais \n");
+					Console.WriteLine("{0} Reais aplicado a uma renda fixa com investimento de {1} %, durante " +
+					"{2} meses, imposto de renda de 15%, rende um total de {3} Reais \n", valor_aplicado, renda_fixa, quant_meses, calculo.impostorenda);
 
 				}
 				else if (quant_meses > 24 && quant_meses < 37)
 				{
-					Console.WriteLine(valor_aplicado + " Reais aplicado a uma renda fixa com investimento de " + renda_fixa + "%, durante "
-					+ quant_meses + " meses, imposto de renda de 5%, rende um total de " + calculo.impostorenda + " Reais \n");
+					Console.WriteLine("{0} Reais aplicado a uma renda fixa com investimento de {1} %, durante " +
+					"{2} meses, imposto de renda de 5%, rende um total de {3} Reais \n", valor_aplicado, renda_fixa, quant_meses, calculo.impostorenda);
 				}
 				else if (quant_meses > 36)
 				{
-					Console.WriteLine(valor_aplicado + " Reais aplicado a uma renda fixa com investimento de " + renda_fixa + "%, durante "
-					+ quant_meses + " meses, imposto de renda de 1%, rende um total de " + calculo.impostorenda + " Reais \n");
+					Console.WriteLine("{0} Reais aplicado a uma renda fixa com investimento de {1} %, durante" +
+					"{2} meses, imposto de renda de 1%, rende um total de {3}", valor_aplicado, renda_fixa, quant_meses, calculo.impostorenda);
 				}
 
 				if (calculo.total_investimento == calculo.impostorenda)
@@ -68,14 +69,14 @@ namespace ConsoleApp3
 				}
 				else if (calculo.total_investimento > calculo.impostorenda)
 				{
-					Console.WriteLine("A modalidade de aplicação Poupança é mais vantajosa, pois o rendimento de: " +
-						calculo.total_investimento + " é maior que " + calculo.impostorenda);
+					Console.WriteLine("A modalidade de aplicação Poupança é mais vantajosa, pois o rendimento de {0}" +
+					" é maior que {1}", calculo.total_investimento, calculo.impostorenda);
 				}
 				else
 				{
-					Console.WriteLine("A modalidade de aplicação renda fixa é mais vantajosa, pois o rendimento de: " +
-						calculo.impostorenda + " é maior que " + calculo.total_investimento);
-					Console.WriteLine("renda fixa: "+calculo.totalrenda_fixa);
+					Console.WriteLine("A modalidade de aplicação renda fixa é mais vantajosa, pois o rendimento de R$ {0}" +
+					" é maior que R$ {1}", calculo.impostorenda, calculo.total_investimento);
+					
 				}
 
 					i = true;
